@@ -3,5 +3,5 @@ from .models import Colaborador
 
 @admin.register(Colaborador)
 class ColaboradorAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'cpf', 'setor')
-    search_fields = ('nome', 'cpf', 'setor')
+    list_display = ('nome', 'matricula', 'setor', 'cargo', 'email', 'telefone', 'data_admissao', 'observacoes')
+    search_fields = ('nome', 'matricula', 'setor', 'cargo', 'email', 'telefone', 'data_admissao', 'observacoes')
