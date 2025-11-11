@@ -7,14 +7,17 @@
     <tr>
         <th>Nome</th>
         <th>Categoria</th>
+        <th>C.A.</th>
         <th>Quantidade</th>
         <th>Validade</th>
         <th>Ações</th>
     </tr>
+
     {% for epi in epis %}
     <tr>
         <td>{{ epi.nome }}</td>
         <td>{{ epi.get_categoria_display }}</td>
+        <td>{{ epi.ca }}</td>
         <td>{{ epi.quantidade }}</td>
         <td>{{ epi.validade|date:"d/m/Y" }}</td>
         <td>

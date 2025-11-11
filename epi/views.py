@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import EPI
 from django.contrib.auth.decorators import login_required
 from django import forms
+from .models import EPI
 
-# Formulário Django para o EPI
+# ✅ Formulário Django para o EPI
 class EPIForm(forms.ModelForm):
     class Meta:
         model = EPI
-        fields = ['nome', 'categoria', 'quantidade', 'validade', 'descricao']
+        fields = ['nome', 'categoria', 'ca', 'quantidade', 'validade', 'descricao']
         widgets = {
             'validade': forms.DateInput(attrs={'type': 'date'}),
         }
