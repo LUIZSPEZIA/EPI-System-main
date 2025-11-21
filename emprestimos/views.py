@@ -47,7 +47,6 @@ def devolver_epi(request, id):
     emprestimo = get_object_or_404(Emprestimo, id=id)
     if not emprestimo.devolvido:
         emprestimo.devolvido = True
-        emprestimo.epi.quantidade += emprestimo.quantidade
         emprestimo.epi.save()
         emprestimo.save()
         messages.success(request, "EPI devolvido com sucesso!")
