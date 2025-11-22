@@ -172,7 +172,7 @@ a:hover {
 }
 /*CAIXA DE USUARIO  E LOGIN/ LOGOUT*/
 .user-info-box {
-  display: flex;
+  display: inline;
   align-items: center;
   gap: 10px;
 }

@@ -11,9 +11,6 @@
           <strong>ID:</strong> {{ colaborador.id }} —
           <strong>{{ colaborador.nome }}</strong> ({{ colaborador.setor }})
           {% if colaborador.matricula %} — Matrícula: {{ colaborador.matricula }}{% endif %}
-          {% if colaborador.foto_colaborador %}
-            <br><img src="{{ colaborador.foto_colaborador.url }}" width="60">
-          {% endif %}
           — <a href="{% url 'colaboradores:editar' colaborador.pk %}">editar</a>
         </li>
       {% endfor %}
