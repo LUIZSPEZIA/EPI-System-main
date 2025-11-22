@@ -20,13 +20,13 @@ class ColaboradorList(LoginRequiredMixin,ListView):
 
 class ColaboradorCreate(LoginRequiredMixin,CreateView):
     model = Colaborador
-    fields = ['nome', 'matricula', 'setor','cargo','email','telefone','data_admissao','observacoes','foto_colaborador']
+    fields = ['nome', 'matricula', 'cpf', 'setor','cargo','email','telefone','data_admissao','observacoes','foto_colaborador']
     success_url = reverse_lazy('colaboradores:lista')
     template_name = 'colaboradores/form.html'
 
 class ColaboradorUpdate(LoginRequiredMixin,UpdateView):
     model = Colaborador
-    fields = ['nome', 'matricula', 'setor', 'cargo','email','telefone','data_admissao','observacoes','foto_colaborador']
+    fields = ['nome', 'matricula', 'cpf', 'setor', 'cargo','email','telefone','data_admissao','observacoes','foto_colaborador']
     success_url = reverse_lazy('colaboradores:lista')
     template_name = 'colaboradores/form.html'
 
