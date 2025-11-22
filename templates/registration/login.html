@@ -13,10 +13,5 @@
 <form id="acesso" method="post" action="/admin/">
     {% csrf_token %}
     <button type="submit">Restrito</button>
-</form>
-<h2>Encerrar Sessão</h2>
-<form id="logout-form" method="post" action="/admin/logout/">
-    {% csrf_token %}
-    <button type="submit">Logout</button>
-</form>
+
 {% endblock %}

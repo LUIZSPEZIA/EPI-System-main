@@ -29,6 +29,17 @@
             <a href="/relatorios/vencidos/">⚠️ EPIs Vencidos</a>
         </div>
     </div>
+  <div class="user-info-box">
+  {% if user.is_authenticated %}
+    <span>Olá, {{ user.username }}!</span>
+    <form id="logout-form" method="post" action="/admin/logout/">
+      {% csrf_token %}
+      <button type="submit">🚪 Sair</button>
+    </form>
+  {% else %}
+    <a href="/accounts/login/">🔑 Entrar</a>
+  {% endif %}
+</div>
 </nav>
     </header>
 

@@ -170,3 +170,14 @@ a:hover {
         min-width: 180px;
     }
 }
+/*CAIXA DE USUARIO  E LOGIN/ LOGOUT*/
+.user-info-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info-box form {
+  display: inline; /* Faz o form se comportar como elemento em linha */
+  margin: 0;
+}
