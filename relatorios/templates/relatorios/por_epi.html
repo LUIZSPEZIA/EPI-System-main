@@ -23,6 +23,7 @@
         <th>Qtd</th>
         <th>Data Empréstimo</th>
         <th>Devolvido</th>
+        <th>Responsável</th>
     </tr>
     {% for e in emprestimos %}
     <tr>
@@ -31,6 +32,7 @@
         <td>{{ e.quantidade }}</td>
         <td>{{ e.data_emprestimo|date:"d/m/Y" }}</td>
         <td>{{ e.devolvido|yesno:"Sim,Não" }}</td>
+        <td>{{ e.responsavel.username }}</td>
     </tr>
     {% empty %}
     <tr><td colspan="5">Nenhum registro encontrado.</td></tr>

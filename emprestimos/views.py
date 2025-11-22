@@ -32,7 +32,8 @@ def criar_emprestimo(request):
             epi.quantidade -= emprestimo.quantidade
             epi.save()
 
-            emprestimo.responsavel = request.user
+            # responsável sempre será o usuário logado
+            emprestimo.responsavel = request.user  
             emprestimo.save()
 
             messages.success(request, "Empréstimo registrado com sucesso!")
